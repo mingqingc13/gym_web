@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="zh-hant">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>計算BMI</title>
     <link rel="stylesheet" href="./css/style.css">
-   <style>
-       form{
-           margin-top:12px;
-           color:lightblue;
-           width:40%;
-           height: 250px;
-       }
-       input{
+    <style>
+        form {
+            margin-top: 12px;
+            color: lightblue;
+            width: 40%;
+            height: 300px;
+        }
+
+        input {
             margin-bottom: 6px;
-            width:60%;
+            width: 60%;
             font-size: large;
-       }
-       button{
-           margin-top:64px
-       }
-       @media screen and (max-width:1024px) {
-           form{
-               width:80%;
-           }
-       }
-       @media screen and (max-width:768px) {
-           form{
-               width:100%;
-           }
-           button{
-               width:200px;
-           }
-       }
-   </style>
+        }
+
+        #calc,#reset {
+            margin-top: 20px;
+            background-color: rgb(98, 162, 143);
+        }
+
+        button {
+            margin-top: 12px
+        }
+
+        #result{
+            background-color:aqua;
+            width: 50%;
+            margin: 0 auto;
+            height: 100px;
+            color: black;
+            font-size: 24px;
+            line-height:100px;
+            border-radius:12px;
+        }
+
+        @media screen and (max-width:1024px) {
+            form {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            form {
+                width: 100%;
+            }
+
+            button {
+                width: 200px;
+            }
+        }
+    </style>
 </head>
+
 <body align="center">
     <div id="container" align="center">
+        <!-- vertical-align="center" -->
         <h1 align=center class="sub-title">BMI計算機</h1>
         <form align="center" action="" method="get">
-<!--             <table>
+            <!--             <table>
                 <tr>
                     <th><label for="name">姓名</label></th>
                     <td><input type="text" name="name" id="name"></td>
@@ -55,20 +79,30 @@
                 </tr>
             </table>
  -->
-                <label for="name">姓名</label>
-                <input type="text" name="name" id="name"><br>
-                <label for="height">身高</label>
-                <input type="number" step="0.1" name="height" id="height" required><br>
-                <label for="weight">體重</label>
-                <input type="number" step="0.1" name="weight" id="weight" required>
-                <br><br><br>
-                <div align=center><button type="submit">計算BMI</button></div>
+            <label for="name">姓名</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="height">身高</label>
+            <input type="number" step="0.1" name="height" id="height" required><br>
+            <label for="weight">體重</label>
+            <input type="number" step="0.1" name="weight" id="weight" required>
+            <br>
+            <div id="result">
+                <span class="bmi">BMI: </span>
+            </div>
+<!--             <div align=center><button type="button" id="calc">計算BMI</button></div>
+            <div align=center><button type="button" id="reset">重設</button></div>
+ -->            
+            <div align=center><input type="button" id="calc" value="計算BMI"></input></div>
+            <div align=center><input type="reset" id="reset" value="重設"></input></div>
+            
         </form><br><br>
         <div align="center"><a href="./index.html">迴回首頁</a></div>
     </div>
-    <p id="footer" style='text-align:center'  <!--  style="background-color:black;color:white;display:inline-block;padding: 3px;border-radius: 3px;" -->
-        &sect;&nbsp;instructor Jerry Chen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy;2022 Mingqing Chen
+    <p id="footer" style='text-align:center' <!--
+        style="background-color:black;color:white;display:inline-block;padding: 3px;border-radius: 3px;" -->
+        &sect;&nbsp;instructor Jerry Chen
     </p>
-
+    <script src="./js/bmi.js"></script>
 </body>
+
 </html>

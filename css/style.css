@@ -170,9 +170,13 @@ ul,ol,p{
     padding: 3px 6px;
     border-radius: 3px;
 }
-@media screen and (max-width:1024px) {
+@media screen and (min-width:1024px) {
     form{
         width:80%;
+    }
+@media screen and (min-width:769px) and (max-width:1023px) {
+    form{
+        width:90%;
     }
 }
 @media screen and (max-width:768px) {
@@ -183,3 +187,5 @@ ul,ol,p{
         width:200px;
     }
 }
+
+
